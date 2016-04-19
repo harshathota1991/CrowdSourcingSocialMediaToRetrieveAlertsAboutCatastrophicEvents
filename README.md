@@ -1,0 +1,2 @@
+# CrowdSourcingSocialMediaToRetrieveAlertsAboutCatastrophicEvents
+performed sentiment analysis on raw twitter data to retrieve alerts about catastrophic events
