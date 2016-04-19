@@ -1,0 +1,94 @@
+library(twitteR)
+library(xlsx); #load the package
+setup_twitter_oauth("eQtdh0UiDScLkHSYXFdDTLmOe", "PQPrjdZXahqWNjRoZ28I2nW6CmQPVPW2QTYtkCSu6xanR4ldbQ","2582309766-j107MDIHLm9ExZhjJyvUGSY7DoKqmWB94S9bXTs","5caf7Z4ZmhCtVCbkvyCuugC5X7xvAh9EmJXcSnqUMUbkG")
+
+list <- searchTwitter("hazard",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "hazard.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+
+list <- searchTwitter("sad",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "sad.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("bad",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "bad.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("blast",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "blast.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("accident",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "acccident.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("fire",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "fire.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("devastated",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "devastated.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("bomb",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "bomb.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("burn",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "burn.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("fatal",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "fatal.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("harmful",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "harmful.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("devastating",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "devastating.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("adverse",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "adverse.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("catastrophic",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "catastrophic.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("mishap",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "mishap.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("damage",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "damage.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("collapse",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "collapse.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)
+
+list <- searchTwitter("calamity",since='2015-11-11',n=1500)
+list2<- twListToDF(list);
+write.xlsx(x = list2, file = "calamity.xlsx",
+           sheetName = "TestSheet", row.names = FALSE)

@@ -1,0 +1,21 @@
+1> tweet_data = load '/home/cloudera/Desktop/Sentiments/tweetsp' using PigStorage('\t') as 
+
+(id:long,timestamp:chararray,tweet_count:int,text:chararray,screen_name:chararray,followers_count:chararray,time_zone:chararray);
+
+
+2>training = load '/home/cloudera/Desktop/Sentiments/tweetsp' using PigStorage('\t')  AS 
+
+(type:chararray,length:int,word:chararray,pos:chararray,stemmed:chararray,polarity:chararray);  
+
+
+3>tweet_tokens = foreach tweet_data generate text, FLATTEN( TOKENIZE(text) ) AS word;
+
+4>Word_Join = join tweet_tokens by word left outer, training by word using 'replicated';
+
+5>weight_score = foreach Word_Join generate tweet_tokens::text as text, (CASE training::polarity WHEN 'positive' THEN 1 WHEN 'negative' THEN -1 else 0 END) as score;
+
+6>Score_group = group weight_score by text;
+
+7>ScoreSum = foreach Score_group generate group as text, SUM(wscore2.score)  as final;
+
+8>Tweet_Sentiment = foreach ScoreSum generate ScoreSum::text as text, ( (ScoreSum::final > 0)? 1 : 0 ) as positive, ( (ScoreSum::final < 0)? 1 : 0 ) as negative; 

@@ -1,0 +1,31 @@
+Instructions for downloading Flume and running twitter analysis.
+
+1> We need to install linux OS. 
+
+2> then we need to install Java and set up Hadoop environment.
+
+3> We can also download open source Hadoop VM from sources like hortonworks sandbox or cloudera's virtual machine
+
+4> Use the below link to download Flume onto your system
+https://flume.apache.org/download.html
+
+5> We can go to
+ cd /usr/lib/flume-ng/apache-flume-1.4.0-bin/bin/ 
+and check whether flume is installed or not.
+
+6> We need to go into the folder location specified above and type the below command:
+
+./flume-ng agent -n TwitterAgent -c conf -f /usr/lib/flume-ng/apache-flume-1.4.0-bin/conf/flume.conf
+
+7>This will download all the twitter data and will load it into the HDFS. 
+
+8>Then go to the web browser:
+go to the hadoop namenode
+the click on user
+go to flume
+tweets
+in this we can find flumeData.19447...
+
+Click on the file to see the raw twitter data.
+
+We have showed this in an output file image.
